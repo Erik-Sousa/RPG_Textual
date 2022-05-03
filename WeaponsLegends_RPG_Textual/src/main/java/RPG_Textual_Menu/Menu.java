@@ -46,7 +46,8 @@ public class Menu {
             switch (opcao) {
                 case 1:
                     
-                    System.out.println("Sejam bem-vindos! A cidade de Lavenham, uma das cidades mais rica de Nochma, nela você irá descobrir que todos nós temos um mistério a ser revelado! ");
+                    System.out.println("Sejam bem-vindos! A cidade de Lavenham, uma das cidades mais rica de Nochma, nela você irá"
+                            + " descobrir que todos nós temos um mistério a ser revelado! ");
                     System.out.println("[1] Anna");
                     System.out.println("[2] Floki");
                     System.out.println("[3] Halroc Christoper");
