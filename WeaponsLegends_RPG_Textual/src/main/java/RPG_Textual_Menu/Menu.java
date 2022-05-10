@@ -140,13 +140,13 @@ public class Menu {
                         }
                     } while (perso < 1 || perso > 5);
 
-                    System.out.println(name + " está no centro da cidade, onde se tem um vasto comércio de objetos artesanais, uma praça pública em frente a igreja e a 3km de distância tem se o castelo do rei Gerald IV, ");
-                    System.out.println("em que se tem uma imensa muralha, torres vigiadas o dia inteiro para a proteção do rei, familiares e de seu tesouro e no fundo do castelo tem ");
-                    System.out.println("o calabouço. Do lado leste à 5km tem a cidade dos anões, chamada de Yggdrasil, à norte tem a floresta de Dean, lá vive criaturas mágicas, do lado noroeste de ");
-                    System.out.println("Lavenham, há 20km tem a tribo mística Salpphire. No Sul, são reinos mais pobres, portanto mais perigosos! ");
+                    System.out.println(name + " está no centro da cidade, onde se tem um vasto comércio de objetos artesanais, uma praça pública em frente a igreja e a 3km de distância tem o castelo do rei Gerald IV, ");
+                    System.out.println("onde tem uma imensa muralha, torres vigiadas o dia inteiro para a proteção do rei, familiares e de seu tesouro e no fundo do castelo tem ");
+                    System.out.println("o calabouço. Do lado leste à 5km está localizado a cidade dos anões, chamada de Yggdrasil, à norte a floresta de Dean, lá vive criaturas mágicas, do lado noroeste de ");
+                    System.out.println("Lavenham, há 20km está a tribo mística Salpphire. No Sul, são reinos mais pobres, portanto mais perigosos! ");
 
                     System.out.println("\n\n- Veja! O mensageiro do rei na praça pública, ele tem um comunicado a se fazer, vamos ouvir o que ele tem a dizer?");
-                    System.out.println("\nEle disse que o rei está precisando de guerreiros dispostos a encarar desafios propostos pelo rei. Você aceita participar?");
+                    System.out.println("\nEle disse que o rei está precisando de guerreiros dispostos a encarar desafios propostos por ele. Você aceita participar?");
                     System.out.println("[1] - Sim");
                     System.out.println("[2] - Nao");
                     escolha = menu.nextInt();
@@ -154,12 +154,12 @@ public class Menu {
                     //contina da historia
                     break;
                 case 2:
-                    System.out.println("Directed by : Amaury S. Alves");
+                    System.out.println("Directed: Amaury S. Alves");
                     System.out.println("Executive Producer: Leonardo S. Santos");
                     System.out.println("Production Director: Amaurilio S. Alves");
                     System.out.println("Visual Producer: Erik S. Sena");
-                    System.out.println("History by: Catiane S. ");
-                    System.out.println("Plot by: Cintia L. Gentil ");
+                    System.out.println("History: Catiane s. Nascimento ");
+                    System.out.println("Plot: Cintia L. Gentil ");
                     break;
 
                 case 3:
