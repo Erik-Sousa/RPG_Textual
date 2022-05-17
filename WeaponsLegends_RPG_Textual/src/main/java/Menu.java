@@ -1,12 +1,81 @@
+
 import java.util.Scanner;
-
-
+import java.util.Random;
 
 public class Menu {
 
-    /**
-     * @param args the command line arguments
-     */
+    static int atkYruan() {
+        Scanner ler = new Scanner(System.in);
+        System.out.println("*** HABILIDADES ***");
+        System.out.println("1-Soco.");
+        System.out.println("2-Chute");
+        return ler.nextInt();
+
+    }
+
+    static int guarda() {
+        Random gera = new Random();
+        return gera.nextInt(2) + 1;
+
+    }
+
+    static int javalif() {
+        Random gera = new Random();
+        return gera.nextInt(3) + 1;
+
+    }
+
+    static void imprimiHp(int hpPlayer, int hpGuarda) {
+        System.out.println("=-=-=-=-=-=");
+        System.out.println("Seu HP \n  " + hpPlayer);
+        System.out.println("HP \n Inimigo " + hpGuarda);
+        System.out.println("=-=-=-=-=-=");
+
+    }
+
+    static void batalha(int hpPlayer, int hpInimigo) {
+
+        int escolhaAtk;
+
+        while (hpPlayer > 0 && hpInimigo > 0) {
+            imprimiHp(hpPlayer, hpInimigo);
+            escolhaAtk = atkYruan();
+            switch (escolhaAtk) {
+                case 1:
+                    System.out.println("Você Atacou com um soco!");
+                    hpInimigo -= 15;
+                    break;
+                case 2:
+                    System.out.println("Você Deu uma voadora!");
+                    hpInimigo -= 25;
+
+                    break;
+                default:
+                    System.out.println("OPÇÃO INVALIDA");
+                    break;
+            }
+            if (hpInimigo > 0) {
+                escolhaAtk = guarda();
+                switch (escolhaAtk) {
+                    case 1:
+                        System.out.println("Guarda aplicou um soco!");
+                        hpPlayer -= 10;
+                        break;
+                    case 2:
+                        System.out.println("Guarda deu um triplo bye bye bird!");
+                        hpPlayer -= 12;
+
+                        break;
+
+                }
+
+            } else {
+                System.out.println("Guarda derrotado!!!");
+            }
+
+        }
+    }
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -73,10 +142,10 @@ public class Menu {
                     System.out.println("Plot: Cintia L. Gentil \n \n");
 
                     System.out.println("Quer voltar ao menu do jogo?");
-                    
+
                     System.out.println("[1] - NAO, Você ira para o jogo diretamente.");
-                    System.out.println("[2] - SIM");   
-                    
+                    System.out.println("[2] - SIM");
+
                     menu = input.nextInt();
                     if (menu == 1) {
                         System.out.println("\n Iniciando");
@@ -154,7 +223,7 @@ public class Menu {
                     if (escolha == 1) {
                         name = "Halroc Cristoper";
                         break;
-                    }  else if (escolha == 2) {
+                    } else if (escolha == 2) {
                         break;
                     }
 
@@ -191,7 +260,7 @@ public class Menu {
                     if (escolha == 1) {
                         name = "Yvenna";
                         break;
-                    } else if (escolha ==2){
+                    } else if (escolha == 2) {
                         break;
                     }
             }
@@ -223,17 +292,23 @@ public class Menu {
                 System.out.println("[1] - Sim");
                 System.out.println("[2] - Nao");
                 escolha = input.nextInt();
-                if (escolha == 1){
-                        System.out.println("Seu atual nivel de Carisma com a cidade e´: " + carisma);
-                        break;
-                }else if (escolha == 2){
-                        break;
+                if (escolha == 1) {
+                    System.out.println("Seu atual nivel de Carisma com a cidade e´: " + carisma);
+                    break;
+                } else if (escolha == 2) {
+                    break;
 
                 }
             case 2:
                 System.out.println("(desconhecido1)-- Veja só, aquela pessoa é nova na cidade,você soube de um boato que mataram alguem ontem nos becos?\n");
                 System.out.println("(Desconhecido2)-- Sim, provavelmente essa é a unica pessoa nova na cidade, não temos casos de assasinato há algum tempo, vamos chamar as autoridades!"
                         + "** Os desconhcidos chamam os guardas para levar você a cadeia!");
+
+                int hpPlayer = 150;
+                int hpGuarda = 50;
+
+                batalha(hpPlayer, hpGuarda);
+
                 System.out.println("Você perdeu -2 Pontos de carisma, se seu carisma chegar a 0, você poderá morrer por sofrer varias pedradas ao longo do caminho,"
                         + " Suba seu carismo para gnahar vantagens nas missões\n");
                 carisma = carisma - 2;
